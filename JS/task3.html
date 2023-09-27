@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK 3</title>
+    <style>
+        header{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 20px;
+        }
+        body{
+            font-size: 20px;
+            padding: 20px;
+            
+            
+        }
+        
+        input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="button"] {
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+            margin-left: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #calc{
+            padding-top: 2.5rem ;
+            padding-left: 3rem;
+        }
+        #fin{
+            text-align: center;
+        }
+        #RESULT{    
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxx">
+        <center>
+            <header><h1>Multiplication and Division</h1></header>
+            <div>   
+            <form id="calc">
+                <label for="first_no">1st Number:</label>
+                <input type="number" name="number1" id="number1" placeholder="number">
+                <br>
+                <br>
+                <label for="second_no">2nd Number:</label>
+                <input type="number" name="number2" id="number2" placeholder="number">
+                <br>
+                <br>
+                <input type="button" value="Multiplication" name="Multiplication" onclick="mult()">
+                <input type="button" value="Division" name="Division" onclick="div()">       
+            </form>
+        </div>
+            <p id="Result"></p>
+        </center>
+
+    </div>
+   
+    <script>
+        function mult(){
+            var num1=parseInt(document.getElementById("number1").value);
+            var num2=parseInt(document.getElementById("number2").value);
+            if(!isNaN(num1) && !isNaN(num2))
+            {
+                const ans=num1*num2;
+                document.getElementById("Result").innerHTML="The Result is: "+ans;
+            }
+        }
+        function div(){
+            var num1=parseInt(document.getElementById("number1").value);
+            var num2=parseInt(document.getElementById("number2").value);
+            if(!isNaN(num1) && !isNaN(num2))
+            {
+                const ans=num1/num2;
+                document.getElementById("Result").innerHTML="The Result is: "+ans;
+            }
+        }
+    </script>
+   
+</body>
+</html>

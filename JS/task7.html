@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS TASK 7 </title>
+    <style>
+        #container {
+            text-align: center;
+        }
+
+        #image {
+            max-width: 100%;
+            height: auto;
+            animation-name: moveImage;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveImage {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(200px);
+            }
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        #startButton, #stopButton {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #fin{
+            text-align: center;
+            padding-top: 20rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="image" src="https://thumbs.dreamstime.com/b/toy-train-cartoon-style-illustration-vector-colorful-cool-game-kids-127139246.jpg" alt="Animated Image">
+        <div id="buttons">
+            <button id="startButton">Start </button>
+            <button id="stopButton">Stop </button>
+        </div>
+    </div>
+
+    <script>
+        const image = document.getElementById('image');
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+
+        startButton.addEventListener('click', startAnimation);
+        stopButton.addEventListener('click', stopAnimation);
+
+        function startAnimation() {
+            image.style.animationPlayState = 'running';
+        }
+
+        function stopAnimation() {
+            image.style.animationPlayState = 'paused';
+        }
+    </script>
+</body>
+</html>

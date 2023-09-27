@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK 2</title>
+    <style>
+        header{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 20px;
+        }
+        body{
+            font-size: 20px;
+            padding: 20px;
+            
+        }
+        input[type="text"] {
+            width: 100px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="button"] {
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+            margin-left: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #calc{
+            padding-top: 2.5rem ;
+            padding-left: 3rem;
+        }
+        #fin{
+            text-align: center;
+        }
+        #RESULT{    
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>    
+            <h1>Sorting a String</h1>
+            </header>
+            <form id="calc">
+                <div>
+                    <label for="inpt">Input String:</label>
+                    <input type="text" id="inpt" name="inpt" placeholder="enter text" required  >
+                    
+                    <input type="button"  value="sort" onclick="sort()">
+                    </div>
+                </form>
+                <p id="RESULT"></p>
+
+    </center>
+    
+   
+        <script>    
+            function sort(){
+               var str=document.getElementById("inpt").value;
+               const sortedstr=str.split('').sort().join('');
+               document.getElementById("RESULT").innerHTML="Sorted text is:"+sortedstr;
+               }
+        </script>
+    </body>
+    </html>
